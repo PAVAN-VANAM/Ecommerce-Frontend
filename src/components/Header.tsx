@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, ShoppingCart, Heart, User, LogOut, Menu, X, Package, Brain} from 'lucide-react';
+import { Search, ShoppingCart, Heart, User, LogOut, Menu, X, Package, Brain } from 'lucide-react';
 import { useShop } from '@/context/ShopContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -112,9 +112,9 @@ const Header = () => {
               </DropdownMenu>
             )}
 
-            <Link to="/chatbot" className="relative text-white hover:text-gray-200">
+            <a href="https://eccomerce-rag-gzi7.vercel.app/" className="relative text-white hover:text-gray-200">
               <Brain className="h-6 w-6" />
-            </Link>
+            </a>
 
             <Link to="/wishlist" className="relative text-white hover:text-gray-200">
               <Heart className="h-6 w-6" />
@@ -212,14 +212,14 @@ const Header = () => {
                 Wishlist
               </Link>
 
-              <Link
-                to="/chatbot"
+              <a
+                href='https://eccomerce-rag-gzi7.vercel.app/'
                 className="px-5 py-3 text-flipkart-dark hover:bg-gray-100 flex items-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <MessageSquare className="h-5 w-5 mr-2" />
+                <Brain className="h-5 w-5 mr-2" />
                 AI Chat
-              </Link>
+              </a>
 
               <Link
                 to="/cart"
